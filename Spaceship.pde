@@ -2,12 +2,14 @@ class Spaceship extends Floater
 {   
     public Spaceship(){
       myColor = color(255,0,0);
+      myColor2 = 255;
       myCenterX=250;
       myCenterY=250;
-      myXspeed=0;
-      myYspeed=0;
+      myXspeed=0.0;
+      myYspeed=0.0;
       corners = 11;
-      myPointDirection=0;
+      myPointDirection=0.0;
+      opac =255;
       xCorners = new int[corners];
       yCorners = new int[corners];
       xCorners[0] = 16;
@@ -33,11 +35,30 @@ class Spaceship extends Floater
       xCorners[6] = -11;
       yCorners[6] = -3;
     }
+  public int getOpac(){
+    return opac;
+  }
+
+  public void fade(){
+    opac-=10;
+  }
   public void hyperspace() {
+    opac = 255;
     myXspeed = 0;
     myYspeed = 0;
     myCenterX = (Math.random()*500);
     myCenterY = (Math.random()*500);
     myPointDirection = (Math.random()*360);
   }
+  public void deccelerate (double dAmount)   
+  { 
+    double dRadians =myPointDirection*(Math.PI/180);        
+    myXspeed -= ((dAmount) * Math.cos(dRadians));    
+    myYspeed -= ((dAmount) * Math.sin(dRadians)); 
+  }  
+  public void slow ()   
+  {       
+    myXspeed = myXspeed/1.04;    
+    myYspeed = myYspeed/1.04;
+  }  
 }
