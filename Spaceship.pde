@@ -38,6 +38,9 @@ class Spaceship extends Floater
   public int getOpac(){
     return opac;
   }
+public double getPointDirection(){
+return myPointDirection;
+}
 
   public void fade(){
     opac-=10;
@@ -61,4 +64,17 @@ class Spaceship extends Floater
     myXspeed = myXspeed/1.04;    
     myYspeed = myYspeed/1.04;
   }  
+  public double getCenterX(){
+    return myCenterX;
+  }
+  public double getCenterY(){
+    return myCenterY;
+  }
+  public double getXspeed(){
+    return myXspeed;
+  }
+  public double getYspeed(){
+    return myYspeed;
+  }
+  
 }
