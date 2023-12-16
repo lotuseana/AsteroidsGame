@@ -117,7 +117,7 @@ public void end() {
   noStroke();
   fill(255, 150);
   rect(100, 150, 300, 150);
-  textSize(50);
+  textSize(40);
   textAlign(CENTER);
   fill(255, 10, 10);
   text("GAME OVER", 250, 230);
