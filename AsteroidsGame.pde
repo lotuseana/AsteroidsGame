@@ -165,5 +165,5 @@ public void ui() {
   textAlign(RIGHT);
   text(score, 160, 430);
   text(milliseconds/1000+" .", 143, 460);
-  text(decim, 160, 460);
+ // text(decim, 160, 460);
 }
