@@ -164,6 +164,6 @@ public void ui() {
   text("elapsed", 50, 460);
   textAlign(RIGHT);
   text(score, 160, 430);
-  text(milliseconds/1000+" .", 143, 460);
+  text(milliseconds/1000+" .", 160, 460);
  // text(decim, 160, 460);
 }
